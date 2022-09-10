@@ -1,0 +1,15 @@
+<sl-card>
+  <h1 slot="header">Welcome to your new app!</h1>
+  <p>Feel free to play around!</p>
+
+  <div slot="footer">
+    <%= render "users/actions" %>
+
+    <% if Rails.env.development? %>
+      <br>
+      <kpc-link variant="default" href="<%= internal_docs_path %>">
+        Docs
+      </kpc-link>
+    <% end %>
+  </div>
+</sl-card>

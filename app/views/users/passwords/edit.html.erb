@@ -1,0 +1,31 @@
+<sl-card>
+  <h2 slot="header"><%= t("auth.change_password") %></h2>
+
+  <%= form_with(model: resource, url: password_path(resource_name), method: :put) do |f| %>
+    <%= f.hidden_field :reset_password_token %>
+
+    <kpc-form-group size="medium">
+      <%= sl_password **resource.form_fields(:password).except(:label), autocomplete: "new-password" do %>
+        <label slot="label">
+          <%= t("auth.new_password") %>
+          <% if @minimum_password_length %>
+            <small>(<%= @minimum_password_length %> characters minimum)</small><br />
+          <% end %>
+        </label>
+      <% end %>
+    </kpc-form-group>
+
+    <kpc-form-group size="medium">
+      <%= sl_password autocomplete: "new-password", label: t("auth.confirm_new_password"),
+                      **resource.form_fields(:password_confirmation).except(:label) %>
+    </kpc-form-group>
+
+    <sl-button-group>
+      <%= sl_submit { t("auth.change_password") } %>
+    </sl-button-group>
+  <% end %>
+
+  <div slot="footer">
+    <%= render "users/actions" %>
+  </div>
+</sl-card>

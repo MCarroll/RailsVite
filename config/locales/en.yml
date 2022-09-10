@@ -1,0 +1,82 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  are_you_sure: "Are you sure?"
+  back: "Back"
+  create: "Create"
+  confirm: "Confirm"
+  edit: "Edit"
+  destroy: "Destroy"
+  delete: "Delete"
+  hello: "Hello"
+  password: "Password"
+  read: "Read"
+  update: "Update"
+
+  auth:
+    cancel: "Cancel my account"
+    change_password: "Change your password"
+    confirm_new_password: "Confirm new password"
+    confirm_via_link: "You can confirm your account email through the link below"
+    confirm_account: "Confirm my account"
+    current_password_prompt: "We need your current password to confirm your changes"
+    forgot_password: "Forgot your password?"
+    login: "Login"
+    logout: "Logout"
+    minimum_characters: "characters minimum"
+    new_password: "New password"
+    no_confirmation: "Didn't receive confirmation instructions?"
+    no_change: "Leave blank if you don't want to change it"
+    no_unlock: "Didn't receive unlock instructions?"
+    password_change: "We're contacting you to notify you that your password has been changed."
+    remember_me: "Remember me"
+    resend_confirmation: "Resend confirmation instructions"
+    resend_unlock: "Resend unlock instructions"
+    send_reset_instructions: Send me reset password instructions
+    signup: "Sign up"
+    signed_out: "You have successfully signed out"
+    sign_in_with: "Sign in with %{provider}"
+    waiting_confirmation: "Currently waiting confirmation for"
+
+  email:
+    requested_password_change: "Someone has requested a link to change your password. You can do this through the link below."
+    requested_password_change_instructions: "If you didn't request this, please ignore this email. Your password won't change until you access the link above and create a new one."
+    welcome: "Welcome"
+
+  account:
+    delete_confirm: "Are you sure you want to delete your account?"
+    edit: "Edit account"
+  organizations:
+    edit: "Edit organization"
+
+
+

@@ -1,0 +1,19 @@
+  <sl-card>
+    <h2 slot="header"><%= t("auth.forgot_password") %></h2>
+
+    <%= form_with(model: resource, url: password_path(resource_name), method: :post, data: { remote: "true" }) do |f| %>
+      <kpc-form-group size="medium">
+        <%= sl_email label: "Email", **resource.form_fields(:email) %>
+      </kpc-form-group>
+
+      <sl-button-group>
+        <%= sl_submit { t("auth.send_reset_instructions") } %>
+      </sl-button-group>
+    <% end %>
+
+    <div slot="footer">
+      <%= render "users/actions" %>
+    </div>
+  </sl-card>
+
+</kpc-container>

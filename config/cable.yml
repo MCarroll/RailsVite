@@ -1,0 +1,15 @@
+default: &default
+  adapter: redis
+  url: <%= RedisConfig.new.url %>
+
+development:
+  <<: *default
+  channel_prefix: rails_starter_development
+
+test:
+  <<: *default
+  channel_prefix: rails_starter_development
+
+production:
+  <<: *default
+  channel_prefix: rails_starter_production
